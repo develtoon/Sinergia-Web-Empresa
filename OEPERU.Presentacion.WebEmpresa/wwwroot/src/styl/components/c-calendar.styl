@@ -1,0 +1,108 @@
+.rbc-calendar
+    color $color-gray-90
+    font-family $type-content
+
+.rbc-btn-group
+    button
+        color $color-gray-90 !important
+        font-size 14px
+
+
+.rbc-event
+
+    flex-flow unset !important
+    flex-direction column !important
+
+    &-label
+        display none !important
+
+    &-content
+        overflow inherit !important
+        font-size: 12px
+    &-allday
+        height 50px
+
+    &-pop
+        padding 10px 20px
+        // box-shadow -11px 1px 21px -8px rgba(0,0,0,0.34);
+        &-content
+            padding:5px 10px 5px 30px
+
+    &-state
+        width 15px
+        height 15px
+        border-radius 3px
+        margin-right 10px
+        &-1
+            background-color $color-state-1
+        &-2
+            background-color $color-state-2
+        &-3
+            background-color $color-state-3
+        &-4
+            background-color $color-state-4
+        &-5
+            background-color $color-state-5
+        &-6
+            background-color $color-state-6
+        &-7
+            background-color $color-state-7
+        &-8
+            background-color $color-state-8
+
+
+    &-img-pop
+        width 40px
+        height 40px
+        border-radius: 100px
+        margin-right 10px
+
+
+    &:focus
+        outline none !important
+    
+
+    &-custom
+        background-color rgba($color-primary-blue, .2) !important
+        border none !important
+        color $color-primary-blue !important
+        font-weight bold
+        border-left 5px solid $color-primary-blue !important
+
+        &-1
+            background-color rgba($color-state-1, .2) !important
+            color $color-state-1 !important
+            border-left 5px solid $color-state-1 !important
+        &-2
+            background-color rgba($color-state-2, .2) !important
+            color $color-state-2 !important
+            border-left 5px solid $color-state-2 !important
+        &-3
+            background-color rgba($color-state-3, .2) !important
+            color $color-state-3 !important
+            border-left 5px solid $color-state-3 !important
+        &-4
+            background-color rgba($color-state-4, .2) !important
+            color $color-state-4 !important
+            border-left 5px solid $color-state-4 !important
+        &-5
+            background-color rgba($color-state-5, .2) !important
+            color $color-state-5 !important
+            border-left 5px solid $color-state-5 !important
+        &-6
+            background-color rgba($color-state-6, .2) !important
+            color $color-state-6 !important
+            border-left 5px solid $color-state-6 !important
+        &-7
+            background-color rgba($color-state-7, .2) !important
+            color $color-state-7 !important
+            border-left 5px solid $color-state-7 !important
+        &-8
+            background-color rgba($color-state-8, .2) !important
+            color $color-state-8 !important
+            border-left 5px solid $color-state-8 !important
+
+
+.popover
+    max-width: 450px
+    width 450px

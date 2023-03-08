@@ -1,0 +1,155 @@
+.c-menu
+    background linear-gradient(1.31deg, #2BA9D9 -50.63%, #2878D9 85.61%)
+    max-width 80px
+    width 100%
+    position fixed
+    left 0
+    top 0
+    height 100vh
+    z-index 20
+    // transition .3s all cubic-bezier(.25,-0.55,.8,1.02) // TODO:  mejorar la animación
+    transition .3s all ease-in
+    &.is-open-mobile
+        display flex
+        box-shadow: 5px 6px 20px rgba(#0F296A, 0.15);
+        left unset
+        right 0
+        max-width: 270px
+        z-index 50
+        .c-menu__actions .paragraph, .c-menu__list .paragraph
+            max-width: 180px
+            font-size 14px
+        
+    +mq($until: "medium")
+        display none
+    &__logo-cont
+        height 65px
+        display flex
+        align-items center
+        justify-content center
+        border-bottom 1px solid rgba($color-primary-blue, .16)
+    &__logo
+        max-width 65px
+        transition .3s all ease-in
+        margin-right auto
+        margin-left auto
+    &__actions,
+    &__list
+        .paragraph
+            white-space: nowrap
+            max-width 0
+            width 100%
+            overflow hidden
+            margin-left 26px
+            line-height: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+    &__actions
+        padding-left 25px
+    &__list:not(.browser-default)
+        padding 25px 12px 0
+        padding-top 25px
+    &__list-item
+        display flex
+        margin-bottom 5px
+        cursor pointer
+        border-radius 12px
+        height 56px
+        padding 0 13px
+        display flex
+        align-items center
+        > a
+            display flex
+            align-items center
+        i
+            color $color-primary-blue
+            svg
+                fill $color-primary-blue
+        &:hover
+            transition: .3s all
+            background-color $color-primary-blue
+            .paragraph
+                color $color-primary-blue
+    &__actions
+        padding-top 30px
+        padding-bottom 30px
+        border-bottom 1px solid rgba($color-primary-blue, .15)
+        border-top 1px solid rgba($color-primary-blue, .15)
+        i
+        .paragraph
+            color $color-gray-30
+            &:hover
+                color $color-primary-blue
+    
+    &__list-lv2
+        opacity 0
+        top 0
+        pointer-events none
+        +mq($from: "medium")
+            position absolute
+            left 100%
+            width 236px
+            background-color $color-white
+            max-height 100vh
+        +mq($until: "medium")
+            max-height: 0
+            opacity 1
+            overflow hidden
+            transition .3s max-height ease-in           
+    
+    &__btn-lv2
+        position absolute
+        user-select none
+        right 0
+        top 0
+        text-align center
+        width 38px
+        line-height: 38px
+        cursor pointer
+        +mq($from: "medium")
+            width 44px
+            line-height: 44px
+        // +mq($until: "medium")
+        //     &:active,
+        //     &:hover
+        //         background-color rgba($color-primary-blue, .5)
+        //         color $color-white
+    &__load-image
+        width 100%
+        height 200px
+        width 200px
+        display flex
+        border-radius 15px 15px 0px 0px
+        align-items center
+        background-color white
+        color $color-gray-40
+        position relative
+        border-bottom 2px solid $color-primary-blue
+        //&:after
+        //        position absolute
+        //        content 'SUBIR IMAGEN'
+        //        font-weight 500
+        //        font-size 14px
+        //        color $color-primary-blue
+        img
+            height 100%
+            width auto
+    &__load-label
+        margin-bottom 7px
+
+
+.c-menu.is-open,
+.c-menu:hover
+    transition .5s all ease
+    box-shadow 5px 6px 20px rgba(#0F296A, 0.15)
+    +mq($from: "medium")
+        max-width 246px
+        .c-menu__logo
+            max-width 125px
+        .c-menu__list
+            padding-top 25px
+        .paragraph
+            transition .2s all ease-in
+            max-width 150px

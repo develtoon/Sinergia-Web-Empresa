@@ -1,0 +1,37 @@
+{
+  "name": "wwwroot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp wat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-transform-modules-amd": "^7.13.0",
+    "@babel/preset-env": "^7.13.9",
+    "autoprefixer-stylus": "^1.0.0",
+    "babel-plugin-polyfill-corejs3": "^0.1.7",
+    "dotenv": "^10.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.2",
+    "node-notifier": "^10.0.0",
+    "stylus-mq": "^3.0.0"
+  },
+  "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.30"
+  }
+}

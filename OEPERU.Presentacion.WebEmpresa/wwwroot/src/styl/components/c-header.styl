@@ -1,0 +1,26 @@
+.c-header
+    position sticky
+    top 0
+    z-index 10
+    background-color white
+    // +mq($from: "medium")
+
+    &__wrapper
+        height 65px
+        display flex
+        align-items center
+        padding-left 12px
+        padding-right 12px
+        +mq($from:'medium')
+            padding-left 105px
+            padding-right 15px
+    &__logo
+        max-width 145px
+    &__logo--alter
+        margin-left auto
+
+    &__avatar
+        display flex
+        border 2px solid $color-primary-blue
+        border-radius 1000px 180px 180px 1000px
+        padding:3px

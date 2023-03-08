@@ -1,0 +1,183 @@
+1000	Tipo de Documento de Identidad
+
+1100	Concepto de Gasto
+
+1200	Tipos de Documento SUNAT
+
+12005	12005	Pedido Inspección Tipo
+12005	1	Inspección realizada
+12005	2	Uso de inmueble como Vivienda
+12005	3	Uso de inmueble como Comercio
+12005	4	Uso de inmueble como Industria
+12005	5	Uso de inmueble como Depósito
+12005	6	Uso de inmueble como Oficina
+12005	7	Uso de inmueble como Terreno
+
+1300	Formas de Pago
+
+1500	Concepto de Pago
+
+1600	Estado de Calendario de Pago
+
+1700	Estado General
+
+1800	Estado de Facturación
+
+1900	Actividad Actual
+
+2000	Estado de Actividad
+
+2100	Tipo de Visita
+
+2200	Estado del Pedido
+
+2300	Checklist de procesos
+
+2400	Tipo de Documento Adjunto
+
+2500	Facturar a
+
+Observaciones Anteriores
+
+falta Paginador funcionalidad y mejora
+
+falta integrar Api de menu para que actualice apenas se cambie en el usuario
+
+falta Integrar las acciones del usuario que tiene seleccionadas
+
+hecho Modificaciones front en mejoras gráficas. (Altura de Estado, titulo de login, Color de Botones, mejora de tablas ancho fijo columna de accion)
+
+hecho Integración de Login recuperar contraseña ()
+
+hecho acomodar inputs en singles
+
+hecho Catalogo quitar eliminar y crear
+
+hecho Pantalla de trabajo maquetada al 100
+
+hecho Ordenamiento
+
+
+Pendiente de integracion trabajo
+
+- Seccion Principal
+... Mapa 2 días
+... integracion 1 día más
+
+- Seccion Documentos Adjuntos
+... integración 2 días
+
+- Seccion Gastos
+... integración 2 días
+
+
+- Seccion Bitacora
+... integración 3 días
+
+- Seccion Inspeccion
+... integración 2 días
+
+
+
+hecho - Acomodar el monto cotizado como integer
+hecho - Acomodar el pago a cuenta como integer
+hecho - Acomodar el RUC como integer
+hecho - A la hora de guardar un nuevo dato se debe setear el ID
+
+hecho - Si selecciona otro en datos de facturación se activa razon social y RUC
+hecho - Setear los valores a 0 al seleccionar vacio.
+
+hecho - cambiar el nombre por Create
+hecho - setear la paginación a 0 para que traiga todos los datos
+
+
+
+
+
+Roles
+Poner un toggle button para activar un menu
+Agg una columna con check de seleccionar todos
+
+
+
+Principal
+mapa hay que hacerlo draggable
+hecho - los inputs hay que acomodarlos tal como los select
+Agregar maxlength a todos los inputs
+hecho - facturar a a la izquierda de razon social
+
+hecho - mensaje del api al guardar debe ser trabajo
+
+seccion adjuntos y gastos poner el link de descarga del archivo a la hora de llamar al api y mostrarlo en documentos y agastos
+
+
+hecho - En bitácora, acomodar la altura del contenedor
+en la llamada de la api acomodar el msj
+70% de ancho para las cards en los comentarios
+
+
+acomodar ancho label de inspeccion
+
+REUNIÓN  12/04/2022 16:00
+
+1.- Ordenar por nombre los datos de ubigeo (departamento, provincia, distrito)
+
+
+2.- validar que seleccione al menos una acción por menú en la pantalla Rol
+3.- Check activar permisos cambiar a Switch, y agregar columna para seleccionar todas las acciones
+
+
+4.- Agregar max length a los inputs
+5.- Poner link del archivo para descargar
+6.- Mandar pantallas de OEPERU como referencia a Christian
+7.- Poner menos altura al contenido de Bitácora
+8.- Corregir mensaje por sección
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+
+--- Pendientes
+1 día, Integrar API de listado de Trabajos con filtro
+1 día, Integrar Reprocesos
+1 día, Integrar Control de Calidad
+1 día, Integrar Datos de Informe
+1 día, Maquetar Mapa para Trabajo
+1 día, Integrar Mapa de Trabajo
+1 día, Maquetar Vista de Calendario
+1 día, Integrar Vista de Calendario
+
+
+
+
+
+
+
+
+// ----------------------------------------------------------------
+Web Administración
+- Usuario
+- Rol
+- Catálogo
+
+// ----------------------------------------------------------------
+Web Empresa
+- Reporte General de Pedidos
+- Colaborador
+- Rol
+- Cliente
+- Trabajos
+-- Listar
+-- Mapa
+-- Crear
+-- Editar
+--- Sección Flujo Trabajo
+--- Sección Principal
+--- Sección Documentos Adjuntos
+--- Sección Gastos
+--- Sección Bitácora
+--- Sección Inspección

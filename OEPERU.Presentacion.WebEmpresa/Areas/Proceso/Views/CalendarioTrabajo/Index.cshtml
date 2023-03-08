@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/lib/react-big-calendar/react-big-calendar.css">
+}
+
+@section Scripts{
+    <script src='@Url.Content("~/lib/momentjs/moment.js")'></script>
+    <script src='@Url.Content("~/lib/momentjs/locale/es.min.js")'></script>
+    <script src='@Url.Content("~/lib/react-big-calendar/react-big-calendar.min.js")'></script>
+}
+
+<script src='@Url.Content("~/js/procesos/calendario/calendario.jsx")' asp-append-version="true"></script>

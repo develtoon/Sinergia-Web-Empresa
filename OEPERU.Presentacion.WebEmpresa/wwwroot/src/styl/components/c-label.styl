@@ -1,0 +1,22 @@
+.showme
+    display none
+    position absolute
+    top 0
+    left 0
+    right 0
+    margin 0 auto
+    z-index 2
+    border-radius 50%
+    background #ffffff
+    padding: 31% 0;
+    &--loading
+        display block
+        padding: 45% 0
+        pointer-events none
+
+.showhim
+    display block
+    position: relative
+    &:hover
+        .showme
+            display block

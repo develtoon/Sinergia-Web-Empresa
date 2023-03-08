@@ -1,0 +1,126 @@
+th
+    font-weight inherit
+    font-size inherit
+
+
+.c-table
+
+    &-nowraped
+        th
+            white-space: nowrap;
+        td
+            white-space: nowrap
+
+
+    &.centered
+        th
+            vertical-align: middle
+        td
+            vertical-align: middle
+
+        .s-link
+            color: $color-primary-blue
+            &:hover
+                text-decoration: underline
+
+    &--v-center
+        display flex
+        justify-content center
+        align-items center
+        height 4rem
+
+    &__options
+        width:30px
+        cursor: pointer
+
+        .dropup
+            position static
+        
+    width 100%
+    font-weight $type-medium
+    $size-height-spacing(13, 24, 0.0025em)
+    thead
+        background #EEF2F5
+        tr
+            border none
+    tr
+        border-bottom 1px solid $color-gray-40
+        
+    th
+        padding 10px 5px
+        color $color-gray-90
+        font-weight $type-bold
+        
+
+        &:hover
+            color: $color-primary-blue
+            // text-decoration: underline $color-primary-blue
+            cursor: pointer
+
+    td
+        padding 10px 5px
+        color $color-gray-90
+        font-size 12px
+        vertical-align: top
+    table
+        
+    &__container
+        background-color white
+        border 1px solid $color-gray
+        +mq($until: "medium")
+            overflow-x scroll
+            border-right 2px solid $color-gray-80
+        &--content
+            width 100%
+            +mq($until: "medium")
+                width calc( 150% + 20vh )
+        &.c-table__container--nowrapper
+            overflow auto
+
+    &__actions
+        display: flex;
+        justify-content: space-between;
+        // background-color: #fff;
+        padding: 12px 0px;
+        select
+            display inline
+            width auto
+            height auto
+            padding 0 10px 0 5px
+            border none
+            appearance none
+            color inherit
+            font-size inherit
+            line-height inherit
+            background-color transparent
+            background-image url("data:image/svg+xml,%3Csvg width='8' height='6' viewBox='0 0 8 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.94 0.226562L4 3.2799L7.06 0.226562L8 1.16656L4 5.16656L0 1.16656L0.94 0.226562Z' fill='%237B7B7B'/%3E%3C/svg%3E%0A")
+            background-position 92% 50%
+            background-repeat no-repeat
+        i.u-pointer
+            user-select none
+            &.disabled
+                color $color-gray-80
+                pointer-events none
+            &.enabled
+                color $color-gray-100
+    .c-card--estado
+        height 22px
+        line-height 22px
+        font-size 12px
+
+    // M O D
+    &--striped
+        font-weight $type-light
+        tr
+            border-bottom none
+        thead
+            th
+                padding 5px 10px
+        tbody
+            padding-top 5px
+            tr:nth-of-type(2n+1)
+                background-color $color-gray-7
+            td
+                padding 5px 10px
+
+

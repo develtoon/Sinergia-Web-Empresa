@@ -1,0 +1,88 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(.55,.055,.675,.19);
+    }
+    50% {
+        transform: rotate(180deg);
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.c-inputfile
+    display flex
+    align-items center
+    height:40px
+
+    
+    &__button
+        display: flex
+        gap:5px
+        align-items: center
+        overflow: hidden;
+        height: 40px;
+        background-color transparent
+        // padding: 10px 40px 10px 15px
+        padding:0px 10px
+        $size-height-spacing(14, 22)
+        color $color-primary-skyblue
+        font-weight $type-regular
+        border 1px solid $color-primary-skyblue
+        border-radius 4px
+        cursor pointer
+        text-decoration none
+        
+        &_text
+            width auto
+            max-width: 200px
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+
+        &_isLoading
+            display: flex
+            padding: 10px 20px
+
+        &:hover
+            color $color-primary-skyblue
+            box-shadow 0px 0px 4px $color-primary-skyblue
+        &:active
+            box-shadow 0px 0px 5px $color-primary-skyblue
+    &__icon
+        position: relative;
+    
+        
+    &__input
+        appearance none
+        opacity 0
+        width 0
+        height 0
+                
+    .is-loading
+        position relative
+        display inline-flex
+        justify-content center
+        align-items center
+        pointer-events none
+        transition .3s all ease
+        &:after
+            content ''
+            position absolute
+        &:after
+            border-width 3px
+            border-top-color transparent
+            border-style solid
+            width 20px
+            border-radius 50%
+            height 20px
+        &:after
+            animation-name: spin
+            animation-duration 1s
+            animation-iteration-count infinite
+            animation-timing-function linear
+    // // S I Z E S
+    // &--md
+

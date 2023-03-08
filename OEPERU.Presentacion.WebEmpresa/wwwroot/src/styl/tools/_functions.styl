@@ -1,0 +1,57 @@
+// @mixin size-height-spacing($size: false, $lineHeight: false, $letterSpacing: false) {
+//   @if ($size) {
+//     font-size: $size + px;
+//   }
+
+//   @if ($lineHeight) {
+//     line-height: $lineHeight + px;
+//   }
+
+//   @if ($letterSpacing) {
+//     letter-spacing: $letterSpacing + px;
+//   }
+// }
+
+// @mixin medium-bold($name, $light:false, $medium: false, $bold: false) {
+//   @if ($light) {
+//     @at-root {
+//       #{$name}--light {
+//         font-weight: $type-light;
+//       }
+//     }
+//   }
+
+//   @if ($medium) {
+//     @at-root {
+//       #{$name}--medium {
+//         font-weight: $type-medium;
+//       }
+//     }
+//   }
+
+//   @if ($bold) {
+//     @at-root {
+//       #{$name}--bold {
+//         font-weight: $type-bold;
+//       }
+//     }
+//   }
+// }
+
+
+$size-height-spacing(size = false, lineHeight = false, letterSpacing = false)
+    if size
+        font-size size px
+    if lineHeight
+        line-height lineHeight px
+    if letterSpacing
+        letter-spacing: letterSpacing
+
+// $convert-1280(prop, value)
+//     {prop} (value/3)*2 px
+
+// $convert-1280-unit(value)
+//     (value/3)*2
+
+$to-2-3(value)
+    (value/3)*2

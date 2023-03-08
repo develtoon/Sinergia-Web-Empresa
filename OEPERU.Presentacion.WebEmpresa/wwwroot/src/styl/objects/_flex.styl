@@ -1,0 +1,122 @@
+$flex = ( flex-start flex-end center )
+$space = ( space-around space-between )
+$stretch = stretch
+$justifyContent = ( flex-start flex-end center space-around space-between )
+$alignContent = ( flex-start flex-end center space-around space-between stretch)
+$alignItems = ( flex-start flex-end center stretch baseline )
+
+.flex
+    display flex
+    &[hidden]
+        display none
+    &.inline
+        display: inline-flex
+    &.fullsize
+        width: 100vw
+        height: 100vh
+    &.column
+        flex-direction: column
+        &.reverse
+            flex-direction: column-reverse
+    &.reverse
+        flex-direction: row-reverse
+    &.wrap
+        flex-wrap: wrap
+        &-reverse
+            flex-wrap: wrap-reverse
+    &.auto
+        > *
+            flex: 1 1 0%
+
+    &-sm
+        +mq($until: "medium")
+            display flex
+    &.center
+        > *
+            margin: auto
+
+    for mod in $justifyContent
+        &.justify-{mod}
+            justify-content mod
+    for mod in $alignItems
+        &.align-{mod}
+            align-items mod
+    for mod in $alignContent
+        &.content-{mod}
+            align-content: mod
+
+    > .box
+        &.first
+            order -1
+        &.last
+            order 1
+        &.grow
+            flex 1 0
+            &-fixed
+                flex 1 0 0
+        &.nogrow
+            flex-grow 0
+            flex-basis auto
+        &.noshrink
+            flex-shrink 0
+        &.center
+            margin auto
+        &.left
+            margin-left 0
+            margin-right auto
+        &.right
+            margin-right 0
+            margin-left auto
+        &.top
+            margin-top 0
+            margin-bottom auto
+        &.bottom
+            margin-bottom 0
+            margin-top auto
+        for mod in $alignItems
+            &.self-{mod}
+                align-self mod
+
+.row .flex > div.col
+    margin-left unset
+    &.pt
+        +mq($until: 'medium')
+            margin-top 12px
+
+.order
+    &_1
+        order 1
+        &--sm
+            +mq($until: 'medium')
+                order 1
+    &_2
+        order 2
+        &--sm
+            +mq($until: 'medium')
+                order 2
+    &_3
+        order 3
+        &--sm
+            +mq($until: 'medium')
+                order 3
+    &_4
+        order 4
+        &--sm
+            +mq($until: 'medium')
+                order 4
+    &_5
+        order 5
+        &--sm
+            +mq($until: 'medium')
+                order 5
+    &_6
+        order 6
+        &--sm
+            +mq($until: 'medium')
+                order 6
+    &_7
+        order 7
+        &--sm
+            +mq($until: 'medium')
+                order 7
+

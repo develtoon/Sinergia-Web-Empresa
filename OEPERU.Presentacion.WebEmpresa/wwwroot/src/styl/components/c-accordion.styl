@@ -1,0 +1,33 @@
+.c-accordion
+    width:100%
+    &-item
+        border-bottom: 2px solid $color-gray-20
+    &-item-3
+        max-height 350px
+        overflow-Y auto
+        padding-right 5px
+    &-header
+        padding 10px 20px
+        display flex
+        justify-content space-between
+        align-items center
+        background-color: $color-gray-5
+        transition all 0.5s
+        
+        &:hover
+            background-color: $color-gray-20
+            cursor: pointer
+
+        &-left
+            display flex
+            align-items center
+            width 100%
+        &-toggle
+            cursor pointer
+        &-input
+            width 70%
+    &-body
+        padding 10px 20px
+        border-top 2px solid $color-gray-20
+        border-right 2px solid $color-gray-20
+        border-left 2px solid $color-gray-20

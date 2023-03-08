@@ -1,0 +1,35 @@
+@keyframes showContent {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(8px);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    75% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes loading {
+    0% { content: 'cargando.'}
+    33% { content: 'cargando..'}
+    66% { content: 'cargando...'}
+    100% { content: 'cargando.'}
+}

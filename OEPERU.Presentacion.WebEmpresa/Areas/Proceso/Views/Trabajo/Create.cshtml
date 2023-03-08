@@ -1,0 +1,33 @@
+@{
+    Layout = "_Layout";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/css/input-range.css">
+    <link rel="stylesheet" href="~/lib/react-light-calendar/react-light-calendar.css">
+}
+
+@section Scripts{
+    <script src="~/lib/chartjs/chart.js"></script>
+    <script src="~/lib/chartjs/chart-datalabels.js"></script>
+    <script src="~/lib/autocomplete/autocomplete.js"></script>
+    <script src="~/lib/google-react-map/google-react-map.js"></script>
+    <script src='@Url.Content("~/lib/momentjs/moment.js")'></script>
+    <script src='@Url.Content("~/lib/chartjs/chart-react.jsx")'></script>
+    <script src='@Url.Content("~/lib/react-input-mask/react-input-mask.min.js")'></script>
+    <script src='@Url.Content("~/lib/react-light-calendar/react-light-calendar.jsx")'></script>
+}
+
+<input id="id" type="hidden" value="@ViewBag.Id" />
+<input id="idTipoTasacionComercial" type="hidden" value="@ViewBag.IdTipoTasacionComercial" />
+<script src="@Url.Content("~/js/core/utils.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/apisimulation.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/flujotrabajo.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/principal.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/adjuntos.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/gastos.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/bitacora.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/inspeccion.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/controlcalidad.jsx")" asp-append-version="true"></script>
+<script src="@Url.Content("~/js/procesos/trabajos/modules/datosinforme.jsx")" asp-append-version="true"></script>
+<script src='@Url.Content("~/js/procesos/trabajos/editar.jsx")' asp-append-version="true"></script>

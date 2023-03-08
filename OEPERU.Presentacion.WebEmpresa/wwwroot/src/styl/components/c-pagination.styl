@@ -1,0 +1,52 @@
+.c-pagination
+    display: flex
+    align-items: center
+    padding 0px
+    color $color-gray-90
+
+    ul
+        padding 0px
+        cursor pointer
+
+
+    &-before
+        border-radius: 5px 0px 0px 5px
+        cursor pointer
+
+    &-after
+        border-radius: 0px 5px 5px 0px
+        cursor pointer
+
+
+    &-before,
+    &-after
+        list-style none
+        padding 10px 15px
+        background-color $color-gray-20
+        border 1px solid $color-gray-20
+        transition: all 0.1s
+    
+    &-before:hover,
+    &-after:hover
+        background-color $color-primary-blue
+        color $color-white
+    
+
+    &-numbers
+        list-style none
+        padding 0px
+        ul
+            display: flex
+        li
+            border 1px solid $color-gray-20
+            list-style none
+            padding 10px 15px
+            transition all .1s
+            &:hover
+                background-color $color-primary-blue
+                color $color-white
+            &.active
+                background-color $color-primary-blue
+                color $color-white
+                font-weight $type-bold
+                

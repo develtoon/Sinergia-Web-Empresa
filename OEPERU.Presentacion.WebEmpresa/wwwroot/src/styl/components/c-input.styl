@@ -1,0 +1,177 @@
+.c-input
+
+    &__label
+        margin-bottom 3px
+        font-size 10px
+        line-height 16px
+        $size-height-spacing(10, 16)
+        +mq($from:'medium')
+            $size-height-spacing(14, 24)
+    &__input
+        background-color $color-white
+        color $color-gray-80
+        height 34px
+        padding 6px 12px
+        $size-height-spacing(14, 24)
+        font-weight $type-regular
+        width 100%
+        border 1px solid $color-gray-30
+        border-radius 2px
+        transition 0.5s
+        &::placeholder
+            color $color-gray-80
+        &:hover
+            border 1px solid $color-gray-50
+        &:focus
+            outline: none
+            border 1px solid $color-gray-60
+        &:disabled
+            background-color $color-gray-10
+            cursor not-allowed
+        +mq($from:'medium')
+            height 40px
+            padding 8px 10px
+    &__simbol-requerid
+        color $color-red
+        margin-right 2px
+    &__textarea
+        border none
+        resize none
+        border 1px solid $color-gray-30
+        color $color-gray-80
+        padding 5px 10px
+        $size-height-spacing(14, 24)
+        font-weight $type-regular
+        width 100%
+        border-radius 2px
+        transition 0.5s
+        &::placeholder
+            color $color-gray-80
+        &:hover
+            border 1px solid $color-gray-50
+        &:focus
+            color $color-gray-80
+            outline: none
+            border 1px solid $color-gray-60
+        &:disabled
+            color $color-gray-100
+            background-color $color-gray-10
+            cursor not-allowed
+        +mq($from:'medium')
+            padding 8px 10px
+    &__icon
+        position absolute
+        right 14px
+        top 2px
+        &:hover
+            cursor: pointer
+    &__cont-input
+        position relative
+    &__autocomplete-item
+        padding 0px 10px
+        color $color-gray-60
+        font-weight $type-regular
+        line-height 24px
+        font-size 14px
+        &:hover
+            color $color-white
+            background $color-primary-skyblue
+            cursor pointer
+    // M O D
+    &--login
+        // ^[0]__input
+        .c-input__input
+            border none
+            color $color-gray-80
+            border-bottom 1px solid $color-gray-80
+            background-color $color-white
+            border-radius 2px
+            // &:hover
+            //     background-color $color-gray-10
+            &:focus
+                color $color-gray-90
+                background-color $color-gray-5
+    
+    &--search
+        .c-input__icon
+            position absolute
+            left 5px
+            width 20px
+            
+        .c-input__input
+            border none
+            border-bottom 1px solid $color-gray-30
+            border-radius: 2px
+            padding 8px 35px
+            &:hover
+                border-bottom 1px solid $color-gray-50
+            &:focus
+                border-bottom 1px solid $color-gray-50
+
+
+
+// input[type='range'],
+// input[type='range']::-webkit-slider-runnable-track,
+// input[type='range']::-webkit-slider-thumb {
+//   -webkit-appearance: none;
+//   border: none
+// }
+// input[type='range']:hover,
+// input[type='range']:focus
+// {
+//     border none
+// }
+
+
+// input[type='range']::-webkit-slider-thumb{
+//     width:20px;
+//     height:20px;
+//     border-radius: 20px;
+//     border: 1px solid $color-primary-blue;
+//     background-color: $color-gray-5
+// }
+// input[type='range']::-moz-range-thumb{
+//     width:20px;
+//     height:20px;
+//     border-radius: 20px;
+//     border: 1px solid $color-primary-blue;
+//     background-color: $color-gray-5
+// }
+// input[type='range']::-ms-thumb{
+//     width:20px;
+//     height:20px;
+//     border-radius: 20px;
+//     border: 1px solid $color-primary-blue;
+//     background-color: $color-gray-5
+// }
+
+
+// input[type='range']::-webkit-slider-runnable-track{
+//     background-color: $color-gray-15;
+//     border 1px solid $color-gray-40
+//   height: 18px;
+//   border-radius: 100px
+// }
+// input[type='range']::-moz-range-track{
+//     background-color: $color-gray-15;
+//     border 1px solid $color-gray-40
+//   height: 18px;
+//   border-radius: 100px
+// }
+// input[type='range']::-ms-track{
+//     background-color: $color-gray-15;
+//     border 1px solid $color-gray-40
+//     height: 18px;
+//     border-radius: 100px
+// }
+
+
+// input[type=range]::-webkit-slider-runnable-track,
+// input[type=range]::-ms-fill-lower,
+// input[type="range"]::-moz-range-progress {
+//   background: linear-gradient(270deg, #2BA9D9 8.02%, #2878D9 93.34%);
+//   height: 18px;
+//   border-radius: 100px 0px 0px 100px
+// }
+
+

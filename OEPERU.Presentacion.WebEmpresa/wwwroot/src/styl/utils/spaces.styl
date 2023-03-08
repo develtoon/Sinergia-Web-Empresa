@@ -1,0 +1,62 @@
+$spaces = 0, 5px, 10px, 15px, 20px
+$directions = left, right, top, bottom
+$dir = l, r, t, b
+
+for $s, i in $spaces
+    .p-{i}
+        padding $s
+    .px-{i}
+        padding-left $s
+        padding-right $s
+    .py-{i}
+        padding-top $s
+        padding-bottom $s
+
+.pt-31-54
+    padding-top 31px
+    +mq($front: 'medium')
+        padding-top 54px
+
+for $d, i in $directions
+    for $s, j in $spaces
+        .m{$dir[i]}-{j}
+            margin-{$d} $spaces[j]
+        .p{$dir[i]}-{j}
+            padding-{$d} $spaces[j]
+
+.mb-6
+    margin-bottom 30px
+.mb-8
+    margin-bottom 40px
+.mb-10
+    margin-bottom 50px
+
+.u
+    &-full
+        width: 100%;
+    &-d--tablet
+    &-d--desktop
+        display none
+    &-d--tablet
+        +mq($from: 'small')
+            display block
+    &-d--desktop
+        +mq($from: 'medium')
+            display block
+    &-d--mobile
+        +mq($from: 'medium')
+            display none
+    &-d--mobile.flex
+        +mq($from: 'medium')
+            display none
+    +mq($from: 'medium')
+        &-sm-mart-10
+            margin-top 10px
+        &-sm-martb-10
+            margin-bottom 10px
+
+
+.u-hide--input
+    width 0
+    height 0
+    overflow hidden

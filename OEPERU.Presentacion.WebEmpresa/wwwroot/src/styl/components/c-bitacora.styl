@@ -1,0 +1,51 @@
+.c-bitacora
+    background-color $color-gray-5
+    padding 20px
+    
+    display flex
+    flex-direction: column
+    
+    
+    &-notification-area
+        display: flex
+        flex-direction: column
+        overflow-y scroll
+        height 350px
+        padding 0px 20px
+        
+
+    &-card
+        align-self flex-end
+        margin-top 20px
+        background $color-primary-skyblue
+        padding 10px
+        border-radius 3px
+        width 70%
+        color $color-white
+        +mq($until: "medium")
+            width 100%
+        &-close
+            cursor pointer
+        &-notme
+            align-self flex-start
+            background $color-white
+            border 2px solid $color-gray-20
+            color $color-gray-90
+
+        &-header
+            display flex
+            justify-content space-between
+            margin-bottom 10px
+
+        &-picture
+            width 30px
+            margin-right 20px
+        
+        &-name
+            font-weight $type-bold
+
+        &-paragraph
+            text-align justify
+        
+        &-date
+            text-align right

@@ -1,0 +1,249 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(.55,.055,.675,.19);
+    }
+    50% {
+        transform: rotate(180deg);
+        animation-timing-function: cubic-bezier(.215,.61,.355,1);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+a.c-button,
+.c-button
+    overflow: hidden
+    height 40px
+    background-color transparent
+    padding 10px 20px
+    $size-height-spacing(14, 22)
+    color $color-primary-skyblue
+    font-weight $type-regular
+    border 1px solid $color-primary-skyblue
+    border-radius 4px
+    cursor pointer
+    text-decoration none
+    &:hover
+        color $color-primary-skyblue
+        box-shadow 0px 0px 4px $color-primary-skyblue
+    &:active
+        box-shadow 0px 0px 5px $color-primary-skyblue
+    &[disabled],
+    &.is-disabled
+        background-color $color-gray-30
+        color $color-gray-40
+        border 1px solid $color-gray-40
+        pointer-events none
+        cursor not-allowed
+
+    // M O D S
+    &--icon
+        padding 10px
+        i
+            width 24px
+    &--rounded
+        padding 10px
+        border-radius 50%
+        &--p-3
+            padding 3px
+        i
+            width 24px
+
+    &--sm
+        height 34px
+        padding 5px 20px
+
+    // C O L O R S
+    &--red
+        background-color transparent
+        border 1px solid $color-red
+        color $color-red
+        &:hover
+            color $color-red
+            box-shadow 0px 0px 4px $color-red
+        &:active
+            color $color-red
+            box-shadow 0px 0px 5px $color-red
+        &[disabled],
+        &.is-disabled
+            background-color $color-gray-30
+            color $color-gray-40
+            border 1px solid $color-gray-40
+            &:hover
+                cursor not-allowed
+
+    
+    &--blue
+        background-color transparent
+        border 1px solid $color-primary-blue
+        color $color-primary-blue
+        &:hover
+            color $color-primary-blue
+            box-shadow 0px 0px 4px $color-primary-blue
+        &:active
+            color $color-primary-blue
+            box-shadow 0px 0px 5px $color-primary-blue
+        &[disabled],
+        &.is-disabled
+            background-color $color-gray-30
+            color $color-gray-40
+            border 1px solid $color-gray-40
+            &:hover
+                cursor not-allowed
+
+    &--skyblue
+        background-color $color-primary-skyblue
+        //border 1px solid $color-primary-blue
+        color $color-white
+        &:hover
+            color $color-primary-blue
+            background $color-white
+            box-shadow 0px 0px 4px $color-primary-blue
+        &:active
+            color $color-primary-blue
+            background $color-white
+            box-shadow 0px 0px 5px $color-primary-blue
+        &[disabled],
+        &.is-disabled
+            background-color $color-gray-30
+            color $color-gray-40
+            border 1px solid $color-gray-40
+            &:hover
+                cursor not-allowed
+    
+    &--green
+        background-color transparent
+        border 1px solid $color-green
+        color $color-green
+        &:hover
+            color $color-green
+            box-shadow 0px 0px 4px $color-green
+        &:active
+            color $color-green
+            box-shadow 0px 0px 5px $color-green
+        &[disabled],
+        &.is-disabled
+            background-color $color-gray-30
+            color $color-gray-40
+            border 1px solid $color-gray-40
+            &:hover
+                cursor not-allowed
+
+    &--minimal
+        cursor pointer
+        text-decoration none
+        background-color transparent
+        border-radius 3px
+        padding 1px 4px
+        &:hover
+            background-color rgba($color-gray-5, .04)
+        &:active
+            background-color rgba($color-gray-5, .12)
+        &:focus
+            border-color: 1px solid $color-primary-skyblue;
+            outline: 0;
+            box-shadow: 0 0 0 .25rem rgba($color-primary-skyblue, .25);
+        &:disabled
+            border: 1px solid rgba($color-gray-5, .56);
+            color rgba($color-gray-5, .56)
+            background-color $color-gray-6
+
+    &--outline
+        background-color #fff
+        border: 1px solid $color-gray-50
+        color $color-primary-blue
+        &:hover
+            background-color $color-gray-50
+
+    // S T A T U S
+    &.is-loading
+        position relative
+        display inline-flex
+        justify-content center
+        align-items center
+        pointer-events none
+        transition .3s all ease
+        &:before,
+        &:after
+            content ''
+            position absolute
+        &:before
+            border-radius 4px
+            cursor pointer
+            width 100%
+            height 100%
+            background-color var(--bg)
+        &:after
+            // border-color #fff
+            border-width 3px
+            border-top-color transparent
+            border-style solid
+            width 20px
+            border-radius 50%
+            height 20px
+        &:after
+            animation-name: spin
+            animation-duration 1s
+            animation-iteration-count infinite
+            animation-timing-function linear
+
+
+// SWAL custom
+.swal-button--danger
+// .swal-modal
+//     border-radius 15px
+//     box-shadow 5px 6px 20px rgba(#0F296A, 0.15)
+.swal-footer
+    text-align center
+
+button.swal-button
+    // $size-height-spacing(14, 17, 0.0125em)
+    font-family $type-content
+    height 40px
+    border 1px solid $color-primary-skyblue
+    border-radius 5px
+    color #fff
+    padding 10px 20px
+    min-width 140px
+    &.swal-button--cancel
+        border 1px solid $color-primary-blue
+        background-color $color-white
+        //border 1px solid $color-primary-blue
+        color $color-primary-blue
+        &:hover
+            color $color-primary-blue
+            background $color-white
+            box-shadow 0px 0px 4px $color-primary-blue
+        &:active
+            color $color-primary-blue
+            background $color-white
+            box-shadow 0px 0px 5px $color-primary-blue
+        &[disabled],
+        &.is-disabled
+            background-color $color-gray-30
+            color $color-gray-40
+            border 1px solid $color-gray-40
+            &:hover
+                cursor not-allowed
+    &.swal-button--confirm
+        border 1px solid $color-primary-skyblue
+        background-color $color-white
+        //border 1px solid $color-primary-blue
+        color $color-primary-skyblue
+        &:hover
+            color $color-primary-skyblue
+            background $color-white
+            box-shadow 0px 0px 4px $color-primary-skyblue
+        &:active
+            color $color-primary-skyblue
+            background $color-white
+            box-shadow 0px 0px 5px $color-primary-skyblue
+        &[disabled],
+        &.is-disabled
+            background-color $color-gray-30
+            color $color-gray-40
+            border 1px solid $color-gray-40
+            &:hover
+                cursor not-allowed

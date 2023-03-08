@@ -1,0 +1,52 @@
+.c-select
+    &__label
+        margin-bottom 3px
+        font-size 10px
+        line-height 16px
+        $size-height-spacing(10, 16)
+        +mq($from:'medium')
+            $size-height-spacing(14, 24)
+    &__cont-select
+        border none
+        &:active
+            border none
+        &:focus
+            border none
+    &__select
+        width 100%
+        color $color-gray-60
+        background-color $color-white
+        border none
+        border 1px solid $color-gray-30
+        height 34px
+        border-radius 2px
+        font-weight $type-regular
+        padding 5px 10px
+        $size-height-spacing(14, 24)
+        background-image url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.8751 1L5.9951 4.88L2.1151 1C1.7251 0.61 1.0951 0.61 0.705098 1C0.315098 1.39 0.315098 2.02 0.705098 2.41L5.2951 7C5.6851 7.39 6.3151 7.39 6.7051 7L11.2951 2.41C11.6851 2.02 11.6851 1.39 11.2951 1C10.9051 0.62 10.2651 0.61 9.8751 1Z' fill='%232F3CB3'/%3E%3C/svg%3E%0A")
+        background-position calc(100% - 20px) 50%
+        background-repeat no-repeat
+        -webkit-appearance none
+        -moz-appearance none
+        appearance none
+        -ms-appearance none
+        transition 0.5s
+        +mq($from:'medium')
+            height 40px
+            padding 8px 10px
+        &:hover
+            color $color-gray-80
+            border 1px solid $color-gray-50
+        &:focus
+            color $color-gray-80
+            &-visible
+                outline: none
+                outline: 1.5px solid $color-gray-50
+        &[disabled=""]
+            color $color-gray-60
+            background-color $color-gray-10
+            cursor not-allowed
+        >option
+            &[disabled]
+                color $color-gray-60
+                background-color $color-disable-option

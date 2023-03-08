@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>OEPERU - Cambiar Contraseña</title>
+    @* <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"> *@
+    <link href="~/lib/bootstrap/bootstrap-5.1.3-min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/main-min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login/login-listar-min.css" asp-append-version="true" />
+</head>
+<body>
+    <input id="id" type="hidden" value="@ViewBag.Id" />
+    @* <script src="~/lib/react/react-17.0.2-min.js"></script>
+        <script src="~/lib/react/react-dom-17.0.2-min.js"></script> *@
+    <script src="~/lib/react/react-dev-17.0.2.js"></script>
+    <script src="~/lib/react/react-dom-dev-17.0.2.js"></script>
+    <script src="~/lib/react-types/prop-types-15.6.0-min.js"></script>
+    <script src="~/lib/redux/redux-5.0.0-min.js"></script>
+    <script src="~/lib/react-intl/react-intl.iife.js"></script>
+
+    <!-- <script src="~/lib/bootstrap/bootstrap-5.1.3-min.js"></script> -->
+    <script src="~/lib/react-bootstrap/react-bootstrap.min.js"></script>
+    <script src="/lib/axios/axios-min.js"></script>
+    <script src="~/lib/sweet-alert/sweetalert-2.1.2-min.js.js"></script>
+    <div id="view" class="App s-field--login-main"></div>
+    <script src="@Url.Content("~/js/core/global.jsx")"></script>
+    <script src="@Url.Content("~/js/cambiarcontrasenia/index.jsx")"></script>
+</body>
+</html>

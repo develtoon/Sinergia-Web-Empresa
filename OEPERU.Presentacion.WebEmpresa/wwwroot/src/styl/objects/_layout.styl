@@ -1,0 +1,33 @@
+.o
+    &-main
+        min-height calc(100vh - 50px)
+        flex-shrink: 1
+        padding: 0 0 90px
+        +mq($from: "medium")
+            min-height calc(100vh - 408px)
+            padding 1px 0 60px 80px
+    &-container
+        &-header
+            width:100%
+            max-width: 100%
+        max-width: 1440px
+        margin-right: auto
+        margin-left: auto
+        width 100%
+        +mq($from:'medium')
+            padding-left 105px
+            padding-right 15px
+        &--1280
+            max-width 1280px
+        &--1110
+            max-width 1110px
+        &--main
+            animation: 600ms ease 500ms showContent;
+            animation-fill-mode: forwards;
+            opacity 0
+            transform translateY(20px)
+            min-height: calc(100vh - 125px)
+            padding 28px 14px
+            +mq($from:'medium')
+                padding 28px
+

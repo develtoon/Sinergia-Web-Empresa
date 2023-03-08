@@ -1,0 +1,28 @@
+.c-list--student
+    padding 10px 5px
+    position relative
+    &:not(:last-child)
+        border-bottom 1px solid $color-gray-3
+    &__actions
+        position absolute
+        right 5px
+        top 10
+        display flex
+    &__wp
+        padding 10px
+        border-radius 10px
+        border 1px solid $color-gray
+    &__l
+        &__sel
+            display flex
+            align-items center
+            padding-left 3px
+        &__avatar
+            padding 0 10px
+            picture
+                overflow hidden
+                border-radius 50%
+                width 92px
+                height 92px
+    &__r
+        padding 5px
